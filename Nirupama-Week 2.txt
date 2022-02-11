@@ -1,0 +1,170 @@
+Qestion1:-
+
+Solution:-
+
+
+object StrFormat
+{
+	 def main(args: Array[String])
+	 {
+         val strToFormat = "https://google.com"
+         val reversedStringAndUpperCase = strToFormat.reverse.toUpperCase()
+         println(s"The reverse and uppercase of the string $strToFormat is $reversedStringAndUpperCase")
+	}
+}
+
+
+Question2:-
+
+Solution:-
+
+
+object StrToJSON
+{
+	 def main(args: Array[String]): Unit=
+	 {
+            val donutName ="Vanilla Donut"
+            val quantityPurchases =10
+            val price = 2.50
+		
+            val donutJson =
+		s"""
+		{
+		"donut_name": "$donutName",
+		"quantity_puchased":"$quantityPurchases",
+		"price":$price
+		}
+		""".stripMargin
+		
+		 println(donutJson)
+		
+	}
+}
+
+
+
+Question3:-
+
+Solution:-
+
+import scala.io.StdIn._
+object PrintNameAge
+{
+	def main(args: Array[String]): Unit =
+	{
+		
+     val name = readLine("Enter your name: ")
+     println("Enter your age: ")
+     val age = readInt()
+     
+     print("Name: ")
+     println(name)
+     print("Age: ")
+     println(age)
+	}
+	
+}
+
+
+Question 4:-
+
+Solution:-
+
+
+object StringChar
+{
+	 def main(args: Array[String]): Unit=
+	 {
+	      val str="http://www.google.com"
+              val charToFind = str.charAt(7)
+              println(s"The 8th character literal in the string $str =$charToFind")
+   
+	}
+}
+
+
+Question5:-
+
+Solution:-
+
+
+object TotalCost
+{
+	 def main(args: Array[String]): Unit=
+	 {
+		val glazedDonut = "Glazed Donut"
+        val unitPrice = 2.50
+        val qtyPurchased = 10
+        val totalCost = qtyPurchased * unitPrice
+
+        println(f"""Total cost of $qtyPurchased $glazedDonut${if (qtyPurchased > 1) "s" else ""} = $$$totalCost%1.2f""")
+	}
+}
+
+
+Question6:-
+
+Solution:-
+
+import scala.io.StdIn._
+object MovieName
+{
+	def main(args: Array[String]): Unit=
+	{
+        val favoriteMovie = readLine("What is your favorite movie of all times?")
+        println(s"$favoriteMovie is totally awesome!")
+	}
+}
+
+
+Question7:-
+
+Soultion:-
+
+object CouponCodes 
+{
+
+  def main(args: Array[String]): Unit = 
+  {
+      val list = List("A","BB","CCC","DDDD","EEEEE")
+
+    var count:Int = 0
+    for(i <- list)
+      {
+        var a:String = i
+        for( a <- 1 to a.length() )
+       {
+          count=count+1;
+        }
+        println(i+"-"+count)
+        count=0;
+
+      }
+  }
+}
+
+Question8:-
+
+Solution:-
+
+object ElementsSum
+{
+	def main(args: Array[String]): Unit =
+	{
+		val a = List.range(100,150,10)
+		val b = a.mkString(", ")
+		println(s"Elements of Vector from 100 to 150, excluding the 150 number literal = $b")
+		
+		var sum: Int = 0
+		for(i<-a)
+		{
+			sum+=i
+		}
+		
+		println(s"Sum of the elements in the list= $sum")
+	}
+	
+}
+
+
+
